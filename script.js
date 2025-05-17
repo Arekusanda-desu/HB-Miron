@@ -1,30 +1,36 @@
 function showGiftExplosion() {
-      const totalGifts = 105;
+    const totalGifts = 25;
 
-      for (let i = 0; i < totalGifts; i++) {
-        setTimeout(() => createGift(), i * 100);
-      }
-
-      // Переход на новую страницу через 3 секунды
-      setTimeout(() => {
-        window.location.href = "second.html";
-      }, 1000);
+    for (let i = 0; i < totalGifts; i++) {
+      setTimeout(() => createGift(), i * 100);
     }
 
-    function createGift() {
-      const gift = document.createElement('div');
-      gift.classList.add('gift');
-      gift.textContent = '🎁';
+    setTimeout(() => {
+      window.location.href = "second.html";
+    }, 3000);
+  }
 
-      const size = 30 + Math.random() * 20;
-      gift.style.fontSize = size + 'px';
+  function createGift() {
+    const gift = document.createElement('div');
+    gift.classList.add('gift');
+    gift.textContent = '🎁';
 
-      gift.style.left = Math.random() * 100 + 'vw';
-      gift.style.top = Math.random() * 100 + 'vh';
+    const size = 30 + Math.random() * 20;
+    gift.style.fontSize = size + 'px';
 
-      document.body.appendChild(gift);
+    gift.style.left = Math.random() * 100 + 'vw';
+    gift.style.top = Math.random() * 100 + 'vh';
 
-      setTimeout(() => {
-        gift.remove();
-      }, 2000);
-    }
+    document.body.appendChild(gift);
+
+    setTimeout(() => {
+      gift.remove();
+    }, 2000);
+  }
+  function showGiftExplosion2() {
+    const totalGifts = 5;
+
+        setTimeout(() => {
+        window.location.href = "third.html";
+    }, 500);
+}
